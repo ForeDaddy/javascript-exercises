@@ -1,13 +1,19 @@
 const removeFromArray = function(array, value) {
-  if (array.includes(value) === true) {
-   let valueIndex = array.indexOf(value);
+  let result = [];
+  
+  for (let j = 1; j < arguments.length; j++) {
+        
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === arguments[j] && typeof array[i] === typeof arguments[j]) {
+      array.splice(i, 1);
+    }
+    }
    
-    array.splice(valueIndex, 1);
-    return array;
-  } else {
-    return array;
   }
-   
+  return array;
+
+  
+  
  };
 
 // Do not edit below this line
